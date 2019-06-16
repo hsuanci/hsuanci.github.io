@@ -1,0 +1,86 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Gift List</title>
+	
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+  	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<nav class="navbar navbar-light bg-light">
+	  			<a class="navbar-brand">Wedding Gift List</a>
+	  		<form class="form-inline">
+	  			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" v-model='search'>
+	    		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    	</form>
+		</nav>
+
+<!-- content -->
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+			
+			<ul v-for="item in searchData ">
+			    <li>No.{{item.no}}; Name:{{item.name}}</li>
+			</ul>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+  var vm = new Vue({
+      el: '#app',
+      data: {
+    search: '',
+    products: [{
+    no: '蘋果',
+    name: 25,
+  }, {
+    no: '香蕉',
+    name: 15,
+   }, {
+   no: '雪梨',
+   name: 65,
+ }, {
+   no: '寶馬',
+   name: 2500,
+}, {
+   no: '賓士',
+   name: 10025,
+}, {
+   no: '柑橘',
+   name: 15,
+ }, {
+   no: '奧迪',
+   name: 25,
+}]
+},
+computed: {
+searchData: function() {
+var search = this.search;
+
+if (search) {
+return this.products.filter(function(product) {
+return Object.keys(product).some(function(key) {
+return String(product[key]).toLowerCase().indexOf(search) > -1
+})
+})
+}
+
+return this.products;
+}
+}
+})
+</script>
+
