@@ -21,7 +21,6 @@
 	  			<a class="navbar-brand">Wedding Gift List</a>
 	  		<form class="form-inline">
 	  			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" v-model='search'>
-	    		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 	    	</form>
 		</nav>
 
@@ -30,12 +29,21 @@
 			<div class="container">
 			
 			<ul v-for="item in searchData ">
-			    <li>No.{{item.no}}; Name:{{item.name}}</li>
+			    <li><h6>Name: {{item.name}}</h6></li>
 			</ul>
 
 			</div>
 		</div>
 	</div>
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="https://hsuanci.github.io/"> hsuanci.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
 </body>
 </html>
 <script>
@@ -44,28 +52,21 @@
       data: {
     search: '',
     products: [{
-    no: '蘋果',
-    name: 25,
-  }, {
-    no: '香蕉',
-    name: 15,
-   }, {
-   no: '雪梨',
-   name: 65,
- }, {
-   no: '寶馬',
-   name: 2500,
-}, {
-   no: '賓士',
-   name: 10025,
-}, {
-   no: '柑橘',
-   name: 15,
- }, {
-   no: '奧迪',
-   name: 25,
-}]
-},
+	   name: 25,
+	 }, {
+	   name: 15,
+	   }, {
+	   name: 65,
+	}, {
+	   name: 2500,
+	}, {
+	   name: 10025,
+	}, {
+	   name: 15,
+	 }, {
+	   name: 25,
+	}]
+	},
 computed: {
 searchData: function() {
 var search = this.search;
