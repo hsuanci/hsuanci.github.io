@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://hsuanci.github.io/backend/net-core-command/</loc>
+    <loc>https://hsuanci.github.io/server/hexo/</loc>
     
     <lastmod>2024-06-23</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://hsuanci.github.io/server/hexo/</loc>
+    <loc>https://hsuanci.github.io/backend/net-core-command/</loc>
     
     <lastmod>2024-06-23</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://hsuanci.github.io/tags/index.html</loc>
+    <loc>https://hsuanci.github.io/categories/index.html</loc>
     
     <lastmod>2024-06-23</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://hsuanci.github.io/categories/index.html</loc>
+    <loc>https://hsuanci.github.io/tags/index.html</loc>
     
     <lastmod>2024-06-23</lastmod>
     
@@ -79,20 +79,6 @@
   </url>
   
   <url>
-    <loc>https://hsuanci.github.io/tags/C/</loc>
-    <lastmod>2024-12-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hsuanci.github.io/tags/SQL/</loc>
-    <lastmod>2024-12-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://hsuanci.github.io/tags/Hexo/</loc>
     <lastmod>2024-12-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -101,6 +87,20 @@
   
   <url>
     <loc>https://hsuanci.github.io/tags/Node-js/</loc>
+    <lastmod>2024-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hsuanci.github.io/tags/C/</loc>
+    <lastmod>2024-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hsuanci.github.io/tags/SQL/</loc>
     <lastmod>2024-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
