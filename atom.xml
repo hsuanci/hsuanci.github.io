@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hsuan Ho | Blog</title>
+  
+  <subtitle>Hsuan Ho | Blog</subtitle>
+  <link href="https://blog.brainidea.net/atom.xml" rel="self"/>
+  
+  <link href="https://blog.brainidea.net/"/>
+  <updated>2024-07-04T13:32:07.978Z</updated>
+  <id>https://blog.brainidea.net/</id>
+  
+  <author>
+    <name>Hsuan Ho</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>探索職涯系列 2024 年 第一站 實體面試</title>
+    <link href="https://blog.brainidea.net/interview/interview_20240620/"/>
+    <id>https://blog.brainidea.net/interview/interview_20240620/</id>
+    <published>2024-06-20T06:00:00.000Z</published>
+    <updated>2024-07-04T13:32:07.978Z</updated>
+    
+    <content type="html"><![CDATA[<p>2024 第二季面試 第一站 : 專案 ? 產品 ?</p><span id="more"></span><p><strong>Table of Cotents</strong></p><div class="panel panel-default panel-badger"><!-- toc --><ul class="lvl-0"><li class="lvl-2"><p><a href="#yin-yan">引言</a></p></li><li class="lvl-2"><p><a href="#shi-ti-mian-shi">實體面試</a></p><ul class="lvl-2"><li class="lvl-4"><a href="#shi-ti-mian-shi-liu-cheng">實體面試流程</a></li></ul></li><li class="lvl-2"><p><a href="#ji-shu-kao-shi">技術考試</a></p><ul class="lvl-2"><li class="lvl-4"><a href="#ji-shu-gai-nian-hui-gu">技術概念回顧</a><ul class="lvl-4"><li class="lvl-6"><a href="#bit-flag">Bit flag</a></li><li class="lvl-6"><a href="#mssql-datetime-zi-liao-xing-bie">MSSQL DateTime 資料型別</a></li><li class="lvl-6"><a href="#c-linq-yan-chi-zai-ru">C# LINQ 延遲載入</a></li><li class="lvl-6"><a href="#javascript-event-loop-promise-microtask-macrotask">JavaScript Event Loop, Promise, microtask &amp; macrotask</a></li></ul></li></ul></li><li class="lvl-2"><p><a href="#ge-ren-hui-kui">個人回饋</a></p></li></ul><!-- tocstop --></div><h1><span id="yin-yan">引言</span><a href="#yin-yan" class="header-anchor">#</a></h1><blockquote><p>回顧我五年的工程師生涯，每段經歷都有其獨特的任務和挑戰，讓我在不斷成長和學習中積累了豐富的經驗。接下來又是下一段經歷的準備期，希望藉由撰寫此篇章能夠從準備其中更認識自己，找到下個目標。</p></blockquote><h1><span id="shi-ti-mian-shi">實體面試</span><a href="#shi-ti-mian-shi" class="header-anchor">#</a></h1><blockquote><p>很榮幸獲得了一間位於大安區人數約為10人公司的面試邀約。公司正在發展自有產品，找新職員的目的是擴編。產品內容是專門為土木工程營造石設計的管理系統，相當有趣。我本是土木系出身，同學大多在營造廠擔任主任等職位。因此理解工地要做系統化管理的困難度。困難點在於營造業雖有一定的流程，但會因應工地的條件去做變化，執行方向就會不同，沒有一定流程，對系統化而言是種挑戰。</p></blockquote><h2><span id="shi-ti-mian-shi-liu-cheng">實體面試流程</span><a href="#shi-ti-mian-shi-liu-cheng" class="header-anchor">#</a></h2><ol><li class="lvl-3"><p>自我/作品介紹 (技術主管)</p><blockquote><p>面試者準備相關資料，面試時與技術主管介紹，途中會問一些問題，多是每個經歷的技術提問。</p></blockquote></li><li class="lvl-3"><p>技術考試</p><blockquote><p>此部分會寫在技術考試</p></blockquote></li><li class="lvl-3"><p>人資面談</p><blockquote><p>上份工作離職理由、為什麼選擇面試此份工作、期待薪資。</p></blockquote></li></ol><h1><span id="ji-shu-kao-shi">技術考試</span><a href="#ji-shu-kao-shi" class="header-anchor">#</a></h1><ul class="lvl-0"><li class="lvl-2"><p>提出需求，立即設計出符合需求的資料庫結構</p></li><li class="lvl-2"><p>C# LINQ</p></li><li class="lvl-2"><p>JavaScript Event Loop</p></li></ul><h2><span id="ji-shu-gai-nian-hui-gu">技術概念回顧</span><a href="#ji-shu-gai-nian-hui-gu" class="header-anchor">#</a></h2><blockquote><p>此部分僅針對筆者當下技術上不夠清楚部分，進行釐清。</p></blockquote><h3><span id="bit-flag">Bit flag</span><a href="#bit-flag" class="header-anchor">#</a></h3><blockquote><p><strong>Q :</strong> 如果今天要設計一個權限系統，你會如何設計 ?<br><strong>筆者 :</strong><br><img src="https://github.com/hsuanci/image/assets/45022117/b8b91ac5-7a4d-4d18-a779-7052d362c8ac" alt="面試流程 drawio"></p><p><strong>Q :</strong> 如果這個 Permission 只能儲存一筆 user 的權限資料要如何改 ?<br><strong>筆者 :</strong> 可以開 4個 prop， 例如 canReadstatus (bit)</p><p><strong>Q :</strong> 如果只用一個 prop 能不能做到 ?<br><strong>筆者 :</strong> 用數字代表大於 等於 ?</p><p><strong>Ans :</strong> 你有聽過 C# Flag enums ?</p></blockquote><h4><span id="shi-mo-shi-flag-enums">什麼是 Flag enums ?</span><a href="#shi-mo-shi-flag-enums" class="header-anchor">#</a></h4><p>假設現在我們有四個權限，分別是讀、寫、執行、分享。<br>如果用 Boolean 概念看，如下所示</p><table><thead><tr><th>讀</th><th>寫</th><th>執行</th><th>分享</th><th>二進位值</th></tr></thead><tbody><tr><td>1</td><td>0</td><td>0</td><td>0</td><td>8</td></tr><tr><td>0</td><td>1</td><td>0</td><td>0</td><td>4</td></tr></tbody></table><p>這些數值可以轉為二進位，再用 C# 比較概念去撰寫以下程式碼，進而判斷權限，是不是很簡潔呢 ?</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Permissions readWrite = Permissions.Read | Permissions.Write; <span class="comment">// 1100 = 12</span></span><br></pre></td></tr></table></figure><p>參考資料 : <a href="https://igouist.github.io/post/2020/06/bit-flags-and-enum">C#: 位元旗標 (Bit flag) 與列舉</a></p><h3><span id="mssql-datetime-zi-liao-xing-bie">MSSQL DateTime 資料型別</span><a href="#mssql-datetime-zi-liao-xing-bie" class="header-anchor">#</a></h3><h3><span id="c-linq-yan-chi-zai-ru">C# LINQ 延遲載入</span><a href="#c-linq-yan-chi-zai-ru" class="header-anchor">#</a></h3><h3><span id="javascript-event-loop-promise-microtask-amp-macrotask">JavaScript Event Loop, Promise, microtask &amp; macrotask</span><a href="#javascript-event-loop-promise-microtask-amp-macrotask" class="header-anchor">#</a></h3><h1><span id="ge-ren-hui-kui">個人回饋</span><a href="#ge-ren-hui-kui" class="header-anchor">#</a></h1><blockquote><p>待補</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;2024 第二季面試 第一站 : 專案 ? 產品 ?&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="interview" scheme="https://blog.brainidea.net/categories/interview/"/>
+    
+    
+    <category term="JavaScript" scheme="https://blog.brainidea.net/tags/JavaScript/"/>
+    
+    <category term="C#" scheme="https://blog.brainidea.net/tags/C/"/>
+    
+    <category term="SQL" scheme="https://blog.brainidea.net/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>.NET Core CLI 筆者常用指令整理</title>
+    <link href="https://blog.brainidea.net/backend/net-core-command/"/>
+    <id>https://blog.brainidea.net/backend/net-core-command/</id>
+    <published>2020-09-13T16:00:00.000Z</published>
+    <updated>2024-06-23T12:53:04.524Z</updated>
+    
+    <content type="html"><![CDATA[<p>.NET Core CLI 常用指令</p><span id="more"></span><p><strong>Table of Cotents</strong></p><div class="panel panel-default panel-badger"><!-- toc --><ul class="lvl-0"><li class="lvl-2"><p><a href="#qian-yan">前言</a></p></li><li class="lvl-2"><p><a href="#cli-zhi-ling">CLI 指令</a></p></li></ul><!-- tocstop --></div><h2><span id="qian-yan">前言</span><a href="#qian-yan" class="header-anchor">#</a></h2><p>記錄筆者常用的 .NET Core 指令</p><h2><span id="cli-zhi-ling">CLI 指令</span><a href="#cli-zhi-ling" class="header-anchor">#</a></h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ dotnet --version (顯示Version)</span><br><span class="line">$ dotnet new [<span class="built_in">type</span> of project] -n [project name]</span><br><span class="line">  $ dotnet new console (new console project)</span><br><span class="line">  $ dotnet new mvc (new mvc project)</span><br><span class="line">  $ dotnet new webapi (new api project)</span><br><span class="line">$ dotnet add package (加入NeGet套件)</span><br><span class="line"><span class="comment"># EF Farmwork &gt; 相依套件</span></span><br><span class="line">$ dotnet add package Microsoft.EntityFrameworkCore.SqlServer</span><br><span class="line">$ dotnet add package Microsoft.EntityFrameworkCore.Design</span><br><span class="line">$ dotnet add package Microsoft.EntityFrameworkCore.Tools</span><br><span class="line"><span class="comment"># 建置</span></span><br><span class="line">$ dotnet build (建置)  -o [ouput path]</span><br><span class="line"><span class="comment"># 清除建置</span></span><br><span class="line">$ dotnet clean</span><br><span class="line"><span class="comment"># 執行</span></span><br><span class="line">$ dotnet run</span><br><span class="line"><span class="comment"># 發行</span></span><br><span class="line">$ dotnet publish  </span><br><span class="line">  &amp; -c Release  </span><br><span class="line">  <span class="comment"># 限定版本 (win10x64)</span></span><br><span class="line">  &amp; -r win10-x64 --self-contained </span><br><span class="line">  <span class="comment"># 全部包裝成執行檔 exe</span></span><br><span class="line">  &amp; -r win10-x64 --no-self-contained</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;.NET Core CLI 常用指令&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="backend" scheme="https://blog.brainidea.net/categories/backend/"/>
+    
+    
+    <category term=".NET Core" scheme="https://blog.brainidea.net/tags/NET-Core/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 超新手起手式 打造專屬自己的 Blog</title>
+    <link href="https://blog.brainidea.net/server/hexo/"/>
+    <id>https://blog.brainidea.net/server/hexo/</id>
+    <published>2020-05-24T07:00:00.000Z</published>
+    <updated>2024-06-23T12:53:04.524Z</updated>
+    
+    <content type="html"><![CDATA[<p>程序員都該有自己的 Blog ? 用來紀錄自己有多辛苦。 就讓筆者簡單紀錄一下，如何使用 Hexo 來建置自己的 Blog 系統吧 ！ 🏃</p><span id="more"></span><p><strong>Table of Cotents</strong></p><div class="panel panel-default panel-badger"><!-- toc --><ul class="lvl-0"><li class="lvl-2"><p><a href="#qian-yan">前言</a></p></li><li class="lvl-2"><p><a href="#qi-shou-shi-di-yi-bu-huan-jing-she-zhi">起手式第一步 (環境設置)</a></p></li><li class="lvl-2"><p><a href="#qi-shou-shi-di-er-bu-helloworld">起手式第二步 (HelloWorld)</a></p></li><li class="lvl-2"><p><a href="#mai-xiang-jin-jie-de-di-yi-bu-ke-zhi-hua-shu-yu-zi-ji-de-blog">邁向進階的第一步 (客製化屬於自己的 Blog)</a></p><ul class="lvl-2"><li class="lvl-4"><a href="#1-ji-ben-wang-zhan-she-ding-config-yml">1. 基本網站設定 (_config.yml)</a></li><li class="lvl-4"><a href="#2-yin-ru-zhu-ti-theme-fang-shi">2. 引入主題 Theme 方式</a><ul class="lvl-4"><li class="lvl-6"><a href="#zhuan-an-she-ding-yin-yong-zhu-ti">專案設定引用主題</a></li></ul></li></ul></li><li class="lvl-2"><p><a href="#hou-ji">後記</a></p><ul class="lvl-2"><li class="lvl-4"><a href="#bi-zhe-chang-yong-cli-zhi-ling">筆者常用 CLI 指令</a></li><li class="lvl-4"><a href="#tao-yong-ga-4">套用 GA 4</a></li><li class="lvl-4"><a href="#plugins">Plugins</a></li></ul></li></ul><!-- tocstop --></div><h1><span id="qian-yan">前言</span><a href="#qian-yan" class="header-anchor">#</a></h1><p>以前隨手會使用 <a href="https://hackmd.io">HackMD</a> 快速記錄下手邊的事情，會議、Bug 解決辦法等，真的是相當方便。但身為工程師還是要自己搞一個 Blog 伺服器，凸顯一下自己建置伺服器的能力，才是一個合格的工程師。因此本篇就此誕生了，讓我們簡單紀錄一下建置 Hexo 的過程吧 !</p><h1><span id="qi-shou-shi-di-yi-bu-huan-jing-she-zhi">起手式第一步 (環境設置)</span><a href="#qi-shou-shi-di-yi-bu-huan-jing-she-zhi" class="header-anchor">#</a></h1><p>讓我們先使用 Google 查詢 <strong>Hexo</strong> !</p><blockquote><p><a href="https://hexo.io/zh-tw/">https://hexo.io</a><br>進入官網就看到一行指令 <code>$ npm install hexo-cli -g</code>，請打開你習慣的終端機工具執行此指令。輸入指令前請安裝 <a href="https://nodejs.org/">Node.Js</a>，Hexo 基於 Node.Js 環境下執行。</p></blockquote><h1><span id="qi-shou-shi-di-er-bu-helloworld">起手式第二步 (HelloWorld)</span><a href="#qi-shou-shi-di-er-bu-helloworld" class="header-anchor">#</a></h1><p>寫程式第一件事就是… HelloWorld (建立一個起始專案)。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  建立起始專案</span></span><br><span class="line">$ hexo init [your blog name]</span><br><span class="line"><span class="comment">#  使用 CD 將工作目錄移至專案資料夾</span></span><br><span class="line">$ <span class="built_in">cd</span> [your blog name]</span><br><span class="line"><span class="comment"># 執行 hexo &gt; 沒意外的話就可以看到 Hexo 的 HelloWorld</span></span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><ul class="lvl-0"><li class="lvl-2"><p>網址前往 <a href="http://localhost:4000">http://localhost:4000</a>。看到以下畫面，代表你已經成功的 HelloWorld 完成建置 Blog 的一大步了。</p></li></ul><img src="https://raw.githubusercontent.com/hsuanci/image/main/hexo-helloworld.jpg" height="600"><h1><span id="mai-xiang-jin-jie-de-di-yi-bu-ke-zhi-hua-shu-yu-zi-ji-de-blog">邁向進階的第一步 (客製化屬於自己的 Blog)</span><a href="#mai-xiang-jin-jie-de-di-yi-bu-ke-zhi-hua-shu-yu-zi-ji-de-blog" class="header-anchor">#</a></h1><p>我們已經完成了環境建置，也建立了我們的 HelloWorld。是時候該往進階的路走了，來吧 ! 我們著手開始進行設定屬於自己的 Blog。</p><p>客製化可以分為以下</p><ol><li class="lvl-3"><p>基本的網頁設定，標題等。</p></li><li class="lvl-3"><p>專案引入前輩們寫好的主題。</p></li></ol><h2><span id="1-ji-ben-wang-zhan-she-ding-config-yml">1. 基本網站設定 (_config.yml)</span><a href="#1-ji-ben-wang-zhan-she-ding-config-yml" class="header-anchor">#</a></h2><p>網站基本設定資訊可以在專案資料夾 <code>[Hexo 專案名稱]/_config.yml</code> 找到。</p><blockquote><p><a href="https://hexo.io/zh-tw/docs/configuration">https://hexo.io/zh-tw/docs/configuration</a><br>詳細內容可以參考 hexo 的配置說明</p></blockquote><h2><span id="2-yin-ru-zhu-ti-theme-fang-shi">2. 引入主題 Theme 方式</span><a href="#2-yin-ru-zhu-ti-theme-fang-shi" class="header-anchor">#</a></h2><p>官網有提供如何客製化自己主題的<a href="https://hexo.io/zh-tw/docs/themes">說明文件</a>。本篇為筆記如何 <strong>引入前輩們寫好的主題</strong> 步驟，所有主題皆可參考本篇步驟進行。</p><ul class="lvl-0"><li class="lvl-2"><p>第一步先前往官網提供<a href="https://hexo.io/themes">主題頁面</a>找到自己喜歡的主題。</p></li></ul><blockquote><img src="https://user-images.githubusercontent.com/45022117/213396472-5f9374aa-0756-4992-9936-68550df7f52c.png" width="400"><p>註 1 :點擊圖片查看該主題的 Demo<br>註 2 :點擊文字 Pure 前往該主題作者的 Github 頁面</p></blockquote><ul class="lvl-0"><li class="lvl-2"><p>本範例使用 Pure 作者的 <a href="https://github.com/cofess/hexo-theme-pure">Github</a> 主題作為引用範例。</p></li></ul><h3><span id="zhuan-an-she-ding-yin-yong-zhu-ti">專案設定引用主題</span><a href="#zhuan-an-she-ding-yin-yong-zhu-ti" class="header-anchor">#</a></h3><ul class="lvl-0"><li class="lvl-2"><p>第一步 : Clone 主題的 repository 至專案</p></li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> [Hexo 專案位置]</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/cofess/hexo-theme-pure.git themes/pure</span><br></pre></td></tr></table></figure><ul class="lvl-0"><li class="lvl-2"><p>第二步 : 至<code>[Hexo 專案名稱]/_config.yml</code>中找到 <code>theme: landscape</code>，改為 <code>theme: pure</code> 改到這邊就成功套用啦。</p><blockquote><p>個人化的設定至 <code>[Hexo 專案名稱]/themes/pure/_config.yml</code> 中更改，更改的內容會依照使用主題而不同，此部分參考主題作者的說明更改。</p></blockquote></li></ul><h1><span id="hou-ji">後記</span><a href="#hou-ji" class="header-anchor">#</a></h1><h2><span id="bi-zhe-chang-yong-cli-zhi-ling">筆者常用 CLI 指令</span><a href="#bi-zhe-chang-yong-cli-zhi-ling" class="header-anchor">#</a></h2><p>參考自<a href="https://hexo.io/zh-tw/docs/commands.html">官網連結</a></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># init new project</span></span><br><span class="line">$ hexo init [folder]</span><br><span class="line"><span class="comment"># create new template by layout</span></span><br><span class="line">$ hexo new [layout] &lt;title&gt;</span><br><span class="line"><span class="comment"># 發布靜態檔案 (可使用 nginx or iis 等伺服器架設)</span></span><br><span class="line">$ hexo generate</span><br><span class="line"><span class="comment"># 執行測試環境</span></span><br><span class="line">$ hexo server</span><br><span class="line"><span class="comment"># 清除快取檔案</span></span><br><span class="line">$ hexo clean</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2><span id="tao-yong-ga-4">套用 GA 4</span><a href="#tao-yong-ga-4" class="header-anchor">#</a></h2><p>施工中。</p><h2><span id="plugins">Plugins</span><a href="#plugins" class="header-anchor">#</a></h2><p>施工中。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;程序員都該有自己的 Blog ? 用來紀錄自己有多辛苦。 就讓筆者簡單紀錄一下，如何使用 Hexo 來建置自己的 Blog 系統吧 ！ 🏃&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="server" scheme="https://blog.brainidea.net/categories/server/"/>
+    
+    
+    <category term="Hexo" scheme="https://blog.brainidea.net/tags/Hexo/"/>
+    
+    <category term="Node.js" scheme="https://blog.brainidea.net/tags/Node-js/"/>
+    
+  </entry>
+  
+</feed>
