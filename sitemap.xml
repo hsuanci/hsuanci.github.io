@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://hsuanci.github.io/categories/index.html</loc>
+    <loc>https://hsuanci.github.io/tags/index.html</loc>
     
     <lastmod>2024-06-23</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://hsuanci.github.io/tags/index.html</loc>
+    <loc>https://hsuanci.github.io/categories/index.html</loc>
     
     <lastmod>2024-06-23</lastmod>
     
@@ -65,13 +65,6 @@
 
   
   <url>
-    <loc>https://hsuanci.github.io/tags/NET-Core/</loc>
-    <lastmod>2024-12-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://hsuanci.github.io/tags/JavaScript/</loc>
     <lastmod>2024-12-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -79,14 +72,7 @@
   </url>
   
   <url>
-    <loc>https://hsuanci.github.io/tags/Hexo/</loc>
-    <lastmod>2024-12-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hsuanci.github.io/tags/Node-js/</loc>
+    <loc>https://hsuanci.github.io/tags/NET-Core/</loc>
     <lastmod>2024-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -106,17 +92,31 @@
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://hsuanci.github.io/categories/backend/</loc>
+    <loc>https://hsuanci.github.io/tags/Hexo/</loc>
     <lastmod>2024-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
+    <loc>https://hsuanci.github.io/tags/Node-js/</loc>
+    <lastmod>2024-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
     <loc>https://hsuanci.github.io/categories/server/</loc>
+    <lastmod>2024-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hsuanci.github.io/categories/backend/</loc>
     <lastmod>2024-12-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

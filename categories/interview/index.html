@@ -49,18 +49,31 @@
   <style>
     .img-default {
       width: 800px;
+      width: 100%; /* 確保寬度佔滿容器 */
+      height: calc(100vw * 9 / 16); /* 預設高度為 16:9 比例 */
       margin: 10px 0 20px;
+      max-height: 600px; /* 最大高度限制，避免過高 */
+      object-fit: cover; /* 確保圖片填充而不變形 */
     }
-
+    @media (max-width: 1024px) {
+      .img-default {
+        height: calc(100vw * 3 / 4); /* 當螢幕較小時，切換為 4:3 高度 */
+        max-height: 400px; /* 限制最大高度 */
+      }
+    }
     @media (max-width: 768px) {
       .img-default {
         width: 400px;
+        width: 100%; /* 確保圖片適應窄螢幕 */
+        height: calc(100vw * 3 / 4); /* 繼續保持 4:3 */
       }
     }
-
     @media (max-width: 576px) {
       .img-default {
         width: 400px;
+        width: 100%; /* 自適應更小螢幕 */
+        height: calc(100vw * 3 / 4); /* 保持 4:3 比例 */
+        max-height: 300px; /* 避免圖片過高 */
       }
     }
   </style>
@@ -301,9 +314,9 @@
         <ul>
           <li><a href="/categories">All</a></li>
           
-          <li><a href="/categories/backend/">backend</a></li>
-          
           <li><a href="/categories/server/">server</a></li>
+          
+          <li><a href="/categories/backend/">backend</a></li>
           
           <li><a href="/categories/interview/">interview</a></li>
           
